@@ -1,0 +1,13 @@
+package javaprogram;
+
+public class Inheritance extends EmployeeTest {
+	void Manager() {
+		System.out.println("Manager");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    
+	}
+
+}
