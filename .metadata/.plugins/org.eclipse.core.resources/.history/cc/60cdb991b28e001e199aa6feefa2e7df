@@ -16,9 +16,6 @@ class App implements Runnable{
 				notify();
 				wait();
 			}
-			if(i==8 && name.equals("Vijay")){
-			     notify();	
-			}
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
