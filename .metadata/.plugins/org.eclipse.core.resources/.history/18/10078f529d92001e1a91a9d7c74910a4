@@ -1,0 +1,24 @@
+package javaprogram;
+
+import java.util.*;
+
+public class ProductTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		List<Product> listOfProduct = new ArrayList<Product>();
+		Product p1 = new Product();
+		p1.setPid(1);
+		p1.setName("A");
+		p1.setPrice(56000);
+		
+		Product p2 = new Product (2, "B", 45000);
+		listOfProduct.add(p1);
+		listOfProduct.add(p2);
+		listOfProduct.add(new Product (3, "C", 88000));
+		System.out.println("Size of product is" + listOfProduct.size());
+		
+	}
+
+}

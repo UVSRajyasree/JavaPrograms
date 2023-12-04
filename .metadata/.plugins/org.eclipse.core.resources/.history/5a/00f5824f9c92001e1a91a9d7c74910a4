@@ -1,0 +1,17 @@
+package javaprogram;
+
+import java.util.*;
+
+public class ProductTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		List<Product> listOfProduct = new ArrayList<Product>();
+		Product p1 = new Product();
+		p1.setPid(1);
+		p1.setPname("A");
+		p1.setPrice(56000);
+	}
+
+}

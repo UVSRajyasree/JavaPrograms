@@ -1,0 +1,49 @@
+package javaprogram;
+
+import java.util.*;
+
+public class ProductTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		List<Product> listOfProduct = new ArrayList<Product>();
+		Product p1 = new Product();
+		p1.setPid(1);
+		p1.setName("A");
+		p1.setPrice(56000);
+		
+		Product p2 = new Product (2, "B", 45000);
+		listOfProduct.add(p1);
+		listOfProduct.add(p2);
+		listOfProduct.add(new Product (3, "C", 88000));
+		System.out.println("Size of product is " + listOfProduct.size());
+		
+		//listOfProduct.remove(1);
+		
+		Iterator<Product> li = listOfProduct.iterator();
+		while (li.hasNext()) {
+			Product p = li.next();
+			if(p.getPid()==1) {
+				li.remove();
+			}
+		}
+		System.out.println("After removing Size is: "+ listOfProduct.size());
+		
+		Iterator<Product> li2 = listOfProduct.iterator();
+		while (li2.hasNext()) {
+			Product p = li2.next();
+			if(p.getPid()==2) {
+				p.setPrice(p.getPrice()+5000);
+			}
+		}
+		System.out.println("After Updating Products is: " + listOfProduct.size());
+		System.out.println("Display One By One");
+		Iterator<Product> li1 = listOfProduct.iterator();
+		while(li1.hasNext()) {
+			Product pp = li1.next();
+			System.out.println(pp); //toString Method
+		}
+	}
+
+}
