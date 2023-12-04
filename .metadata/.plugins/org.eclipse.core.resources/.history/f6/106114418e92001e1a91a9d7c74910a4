@@ -1,0 +1,63 @@
+package javaprogram;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Set;
+import java.util.Vector;
+public class GetValuesOneByOne {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Set API 
+		Set ss = new HashSet();
+		ss.add(3); ss.add(2); ss.add(5);ss.add(7); ss.add(9);
+		System.out.println(ss);    // it display the output as string format 
+		// It Will Display Value One By One But We Cannot Perform Other Methods
+		System.out.println("Retrieve the value using for each loop or enhanced loop");
+		for(Object n:ss) {
+			System.out.println(n);
+		}
+		//It Will Display Value One By One Where We Can Use Other Methods
+		System.out.println("Retrieve the elements one by one");
+		 Iterator li  =  ss.iterator();
+		 while(li.hasNext()) {
+			 Object obj = li.next();
+			 System.out.println(obj.equals(obj));
+			 System.out.println(obj);
+		 }
+		// List API , LinkedList and ArrayList 
+			
+			List ll = new ArrayList();
+			ll.add("Ravi");ll.add("Ramesh");ll.add("Ajay");ll.add("Vijay");
+			System.out.println(ll);
+			// for each loop or enhanced loop or iterator 
+			ListIterator ls = ll.listIterator();
+			System.out.println("forward direction");
+			while(ls.hasNext()) {
+				Object obj = li.next();
+				System.out.println(obj);
+			}
+			System.out.println("backward direction");
+			while(ls.hasPrevious()) {
+				Object obj = ls.previous();
+				System.out.println(obj);
+			}
+			Vector vv = new Vector();
+			vv.add(3); vv.add(7);vv.add(10);
+			System.out.println("Retrieve value from Vector");
+			Enumeration ee = vv.elements();
+			while(ee.hasMoreElements()) {
+				Object obj = ee.nextElement();
+				System.out.println(obj);
+			}
+	}
+
+}
